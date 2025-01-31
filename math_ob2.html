@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<h1>컴퓨터 가위, 바위, 보 맞추기</h1>");
+
+        var game = prompt("가위, 바위, 보 중 선택하세요.","가위")
+        var gameNum;
+        
+        switch (game) {
+            case "가위":
+                gameNum=1;
+                break;
+                
+            case "바위":
+                gameNum=2;
+                break;
+
+            case "보":
+                gameNum=3;
+                break;
+        
+            default:
+                alert("잘못 작성하였습니다.");
+                location.reload();
+                break;
+        }
+        // Math.random(); //0~1 사이 수
+        // Math.random()*3; //0~3 사이 수
+        var com = Math.floor(Math.random()*3)+1; //0~3 사이 수 이지만 floor로 정수로 된다. 거기다 +1을 추가해 1,2,3 중하나로 한다.
+
+        // document.write("<img src='/images/math_img_1.jpg'>"); 
+        document.write("<img src='/images/math_img_" + com + ".jpg'><br>"); //숫자대신 com을 넣어서 1~3중에 숫자 하나가 나오게함
+
+        if (gameNum == com) {
+            document.write("<img src='/images/game_1.jpg'>");
+        } else {
+            document.write("<img src='/images/game_2.jpg'>");            
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

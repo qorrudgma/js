@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var greenArr=["교대","방배","강남"]
+        var yellowArr=["미금","오리","죽전"]
+
+        greenArr.splice(2,1,"서초","역삼"); //splice(n,m,"~","~"): n번째부터 m개 삭제하고 뒷내용 추가
+        console.log(greenArr);
+        
+        var date1 = yellowArr.pop(); //pop(): 마지막 데이터를 잘라내기해서 date1에 저장
+        var date2 = yellowArr.shift(); //pop(): 첫번째 데이터를 잘라내기해서 date2에 저장
+
+        yellowArr.push(date2); //push(~): 배열 마지막에 ~를 추가
+        yellowArr.unshift(date1); //unshift(~): 배열 처음에 ~를 추가
+
+        // console.log(yellowArr);
+        // console.log(date1);
+        
+        console.log(yellowArr);
+        // console.log(date2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
